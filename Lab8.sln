@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8Linear", "Lab8Linear\Lab8Linear.vcxproj", "{EB2E24B2-467A-4B62-AAEA-2FD416F0D754}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8Mesh", "Lab8Mesh\Lab8Mesh.vcxproj", "{0A558527-A0A4-469B-9D73-7BA326ABDD64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{EB2E24B2-467A-4B62-AAEA-2FD416F0D754}.Release|x64.Build.0 = Release|x64
 		{EB2E24B2-467A-4B62-AAEA-2FD416F0D754}.Release|x86.ActiveCfg = Release|Win32
 		{EB2E24B2-467A-4B62-AAEA-2FD416F0D754}.Release|x86.Build.0 = Release|Win32
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Debug|x64.ActiveCfg = Debug|x64
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Debug|x64.Build.0 = Debug|x64
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Debug|x86.ActiveCfg = Debug|Win32
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Debug|x86.Build.0 = Debug|Win32
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x64.ActiveCfg = Release|x64
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x64.Build.0 = Release|x64
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x86.ActiveCfg = Release|Win32
+		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
