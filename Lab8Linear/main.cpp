@@ -11,10 +11,11 @@ void matrixMultiplication(vector<vector<int>>& A, vector<vector<int>>& B, vector
 		C.push_back(vector<int>());
 
 		for (int j = 0; j < size; j++) {
-			C[i].push_back(0);
+			int temp = 0;
 
 			for (int k = 0; k < size; k++)
-				C[i][j] += A[i][k] * B[k][j];
+				temp += A[i][k] * B[k][j];
+			C[i].push_back(temp);
 		}
 	}
 }
@@ -23,7 +24,7 @@ int main()
 {
 	srand(time(0));		//init random
 
-	vector<int> sizes = { 100, 1000, 5000 };
+	vector<int> sizes = { 100, 1000/*, 5000*/ };
 	
 	vector<vector<int>> A, B, C;
 
