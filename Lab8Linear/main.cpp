@@ -5,17 +5,16 @@
 
 using namespace std;
 
-void matrixMultiplication(vector<vector<int>>& A, vector<vector<int>>& B, vector<vector<int>>& C, int size)
+void matrixMultiplication(int*& A, int*& B, int*& C, int size)
 {
+	int temp;
 	for (int i = 0; i < size; i++) {
-		C.push_back(vector<int>());
-
 		for (int j = 0; j < size; j++) {
-			int temp = 0;
+			temp = 0;
 
 			for (int k = 0; k < size; k++)
-				temp += A[i][k] * B[k][j];
-			C[i].push_back(temp);
+				temp += A[i * size + k] * B[k * size + j];
+			C[i * size + j] += temp;
 		}
 	}
 }
@@ -24,19 +23,24 @@ int main()
 {
 	srand(time(0));		//init random
 
-	vector<int> sizes = { 100, 1000/*, 5000*/ };
+	vector<int> sizes = { 100, 1000, 5000 };
 	
-	vector<vector<int>> A, B, C;
+	int* A;
+	int* B;
+	int* C;
 
 	for (int size : sizes) {
 
+		A = new int[size * size];
+		B = new int[size * size];
+		C = new int[size * size];
+
 		for (int i = 0; i < size; i++) {			//init matrices
-			A.push_back(vector<int>());
-			B.push_back(vector<int>());
 
 			for (int j = 0; j < size; j++) {
-				A[i].push_back(rand() % 10 + 1);	//value from 1 to 10
-				B[i].push_back(rand() % 10 + 1);
+				A[i * size + j] = rand() % 10 + 1;	//value from 1 to 10
+				B[i * size + j] = rand() % 10 + 1;
+				C[i * size + j] = 0;
 			}
 		}
 
@@ -51,9 +55,5 @@ int main()
 		int millisec = chrono::duration_cast<chrono::milliseconds>(end - start).count();
 
 		cout << "Time for size = " << size << " is " << millisec << "ms\n";
-
-		A.clear();
-		B.clear();
-		C.clear();
 	}
 }

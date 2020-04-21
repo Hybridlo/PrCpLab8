@@ -29,6 +29,7 @@ void matrixMultiplicationMPI(int*& A, int*& B, int*& C, int size, int procRank, 
 	MPI_Status Status;
 
 	int procPartsize = dim / procAmount;
+	cout << procPartsize << endl;
 	int procPartElem = procPartsize * dim;
 
 	int* bufA = new int[procPartElem];
