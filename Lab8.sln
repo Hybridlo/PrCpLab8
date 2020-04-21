@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8Linear", "Lab8Linear\La
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8Mesh", "Lab8Mesh\Lab8Mesh.vcxproj", "{0A558527-A0A4-469B-9D73-7BA326ABDD64}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8Fox", "Lab8Fox\Lab8Fox.vcxproj", "{1B2A4E00-D80B-4527-BC76-2ECE28513991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x64.Build.0 = Release|x64
 		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x86.ActiveCfg = Release|Win32
 		{0A558527-A0A4-469B-9D73-7BA326ABDD64}.Release|x86.Build.0 = Release|Win32
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Debug|x64.ActiveCfg = Debug|x64
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Debug|x64.Build.0 = Debug|x64
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Debug|x86.Build.0 = Debug|Win32
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Release|x64.ActiveCfg = Release|x64
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Release|x64.Build.0 = Release|x64
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Release|x86.ActiveCfg = Release|Win32
+		{1B2A4E00-D80B-4527-BC76-2ECE28513991}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
