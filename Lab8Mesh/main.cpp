@@ -21,7 +21,6 @@ void transpose(int*& matrix, int size)
 
 void matrixMultiplicationMPI(int*& A, int*& B, int*& C, int size, int procRank, int procAmount)
 {
-
 	int dim = size;
 	int i, j, k, p, ind;
 	int temp;
@@ -29,7 +28,6 @@ void matrixMultiplicationMPI(int*& A, int*& B, int*& C, int size, int procRank, 
 	MPI_Status Status;
 
 	int procPartsize = dim / procAmount;
-	cout << procPartsize << endl;
 	int procPartElem = procPartsize * dim;
 
 	int* bufA = new int[procPartElem];
@@ -49,7 +47,9 @@ void matrixMultiplicationMPI(int*& A, int*& B, int*& C, int size, int procRank, 
 		for (j = 0; j < procPartsize; j++)
 		{
 			for (k = 0; k < dim; k++)
+			{
 				temp += bufA[i * dim + k] * bufB[j * dim + k];
+			}
 
 			bufC[i * dim + j + procPartsize * procRank] = temp;
 			temp = 0;
