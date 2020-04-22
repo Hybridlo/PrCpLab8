@@ -6,6 +6,19 @@
 
 using namespace std;
 
+void transpose(int*& matrix, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = 0; j < size; j++)
+		{
+			int tmp = matrix[i * size + j];
+			matrix[i * size + j] = matrix[j * size + i];
+			matrix[j * size + i] = tmp;
+		}
+	}
+}
+
 typedef struct
 {
 	int procAmount;
@@ -341,7 +354,7 @@ void matrixMultiplyAdd(int*& A, int*& B, int*& C, int size)
 			int temp = 0;
 
 			for (int k = 0; k < size; k++)
-				temp += A[i * size + k] * B[k * size + j];
+				temp += A[i * size + k] * B[j * size + k];
 			C[i * size + j] += temp;
 		}
 	}
@@ -434,6 +447,7 @@ int main()
 				B[i] = rand() % 10 + 1;
 			}
 
+			transpose(B, size);
 		}
 
 		int submatrixSize = size / sqrt(info.procAmount);
